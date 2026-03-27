@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    int marks = 90;
+};
+
+class Sports : public Student {
+public:
+    int score = 80;
+};
+
+class Result : public Sports {
+public:
+    void display() {
+        cout << "Marks = " << marks << endl;
+        cout << "Sports Score = " << score;
+    }
+};
+
+int main() {
+    Result r;
+    r.display();
+    return 0;
+}
